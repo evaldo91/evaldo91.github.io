@@ -1,33 +1,61 @@
+.main_perfil {
+    display: flex;
+    align-items: center; /* Alinha texto e imagem verticalmente */
+    justify-content: space-between; /* Dá espaço entre os dois blocos */
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 5% 10%; /* Reduzi o padding superior para melhor equilíbrio */
+    flex-wrap: wrap;
+    width: 90%; /* Aumentado para aproveitar melhor o espaço */
+    gap: 40px; /* Espaço entre texto e imagem quando empilharem */
+}
 
-.main_perfil{
+.main_perfil_sobre {
+    box-sizing: border-box;
+    flex: 1; /* Faz o texto crescer organicamente */
+    min-width: 300px; /* Impede que o texto fique muito esmagado */
+}
+
+.main_perfil_sobre_h1 {
+    font-size: clamp(1.8rem, 5vw, 2.5rem); /* Fonte que se ajusta ao tamanho da tela */
+    font-weight: 600;
+    padding-bottom: 15px;
+    color: var(--verde-claro); /* Usando sua variável de destaque */
+}
+
+.main_perfil_sobre_p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.main_perfil_img {
+    flex: 0 1 400px; /* Não cresce, mas diminui se necessário até 400px */
+    max-width: 100%; /* Garante que não ultrapasse a tela no mobile */
+    aspect-ratio: 1 / 1; /* Mantém a proporção perfeitamente circular */
+    border-radius: 50%; 
+    overflow: hidden; 
+    box-shadow: 10px 10px 0px var(--verde-amarelado); /* Shadow sólido estilo "Pop Art/Cyberpunk" */
     display: flex;
     justify-content: center;
-    box-sizing: border-box;
-    margin: auto;
-    padding: 10%;
-    padding-bottom: 0;
-    flex-wrap: wrap;
-    width: 80%;
-
-
-
-}
-.main_perfil_sobre{
-    box-sizing: border-box;
-    width: 50%;
-    margin: auto;
-
-    flex-wrap: wrap;
-}
-.main_perfil_sobre_h1{
-    font-size: 2rem;
-    font-weight: 500;
-    padding-bottom: 8px;
+    align-items: center;
 }
 
-.main_perfil_img{
-    width: 30rem;
-    border-radius: 100%; 
-    overflow: hidden; 
-    box-shadow: 0.625rem 0.3125rem var(--verde-amarelado);
+.main_perfil_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a foto não fique esticada */
+}
+
+/* Ajuste para telas pequenas (Mobile) */
+@media (max-width: 768px) {
+    .main_perfil {
+        flex-direction: column-reverse; /* Foto em cima, texto embaixo no mobile */
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    .main_perfil_img {
+        width: 250px; /* Tamanho menor para celulares */
+    }
 }
