@@ -1,53 +1,85 @@
-.main_galeria{
-    box-sizing: border-box;
+/* Container Principal */
+.main_galeria {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: auto;
-    padding: 5%;
-    gap: 10px;
-    
-
+    gap: 20px; /* Aumentado para melhor respiro */
+    padding: 40px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-.main_galeria_itens{
+
+/* Card do Projeto */
+.main_galeria_itens {
     background-color: var(--roxo-escuro);
-    width: 400px;
-    border-radius: 10px;
-    box-sizing: border-box;
+    width: 100%;
+    max-width: 380px; /* Ligeiramente menor para caber melhor em telas médias */
+    min-height: 450px; /* Garante altura uniforme */
+    border-radius: 12px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 5px solid var(--roxo-escuro);
-    margin: 10px;
-    padding: 10px;
-    
-
-}
-.main_galeria_itens:hover{
-    border: 5px solid var(--verde-claro);
-}
-.main_galeria_itens_h2{
-text-align: center;
-font-weight: 600;
-font-size: 1.5rem;
+    border: 2px solid transparent; /* Border transparente para evitar "pulo" no hover */
+    padding: 20px;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
 }
 
-.tag_java{
-    border: 2px solid tomato;
-    font-size: 0.7rem;
-    border-radius: 5px;
-    padding: 2px;
-    margin: 5px;
-    background-color: tomato;
+/* Efeito de Hover Elevado */
+.main_galeria_itens:hover {
+    transform: translateY(-8px); /* Card sobe levemente */
+    border-color: var(--verde-claro);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
 
+/* Título do Projeto */
+.main_galeria_itens_h2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--verde-claro); /* Ou a cor de destaque do seu tema */
+    margin-bottom: 15px;
 }
-.tag_cli{
-    border: 2px solid silver;
-    font-size: 0.7rem;
-    border-radius: 5px;
-    padding: 2px;
-    background-color: silver;
+
+/* Descrição */
+.main_galeria_itens_descricao_p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Faz o texto ocupar o espaço disponível */
 }
-.main_galeria_itens_descricao_p{
-    margin: 10px;
+
+/* Sistema de Tags (Badges) */
+.container_tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+    padding-top: 15px;
+}
+
+.tag {
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 4px;
+    padding: 4px 10px;
+    color: #fff;
+}
+
+.tag_java {
+    background-color: #f05032; /* Tom de tomato mais vibrante */
+    border: 1px solid #c0392b;
+}
+
+.tag_cli {
+    background-color: #7f8c8d; /* Cinza metálico */
+    border: 1px solid #95a5a6;
+}
+
+/* Adicionei para Spring para combinar com seu perfil */
+.tag_spring {
+    background-color: #6db33f;
+    border: 1px solid #5a9632;
 }
