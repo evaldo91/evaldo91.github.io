@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Painel Administrativo | Adicionar Projeto</title>
+    <link rel="stylesheet" href="./src/styles/style.css">
+    <style>
+        .admin-form {
+            max-width: 600px;
+            margin: 50px auto;
+            background: var(--roxo-escuro);
+            padding: 30px;
+            border-radius: 12px;
+            border: 2px solid var(--verde-claro);
+        }
+        .admin-form h2 { color: var(--verde-claro); margin-bottom: 20px; }
+        .form-group { margin-bottom: 15px; display: flex; flex-direction: column; }
+        .form-group label { margin-bottom: 5px; color: var(--verde-amarelado); }
+        .form-group input, .form-group textarea {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background: #2d2d3a;
+            color: white;
+        }
+        .btn-enviar {
+            background: var(--verde-claro);
+            color: var(--roxo-escuro);
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn-enviar:hover { background: var(--verde-amarelado); transform: scale(1.02); }
+    </style>
+</head>
+<body>
+    <div class="admin-form">
+        <h2>🚀 Adicionar Novo Projeto</h2>
+        <form id="projetoForm">
+            <div class="form-group">
+                <label>Título do Projeto:</label>
+                <input type="text" id="titulo" placeholder="Ex: API Gerenciador de Tarefas" required>
+            </div>
+            <div class="form-group">
+                <label>Caminho da Imagem:</label>
+                <input type="text" id="imagem" placeholder="./src/img/seu-projeto.png" required>
+            </div>
+            <div class="form-group">
+                <label>Link do GitHub:</label>
+                <input type="url" id="link" placeholder="https://github.com/..." required>
+            </div>
+            <div class="form-group">
+                <label>Tags (separadas por vírgula):</label>
+                <input type="text" id="tags" placeholder="Java, Spring, Docker">
+            </div>
+            <div class="form-group">
+                <label>Descrição:</label>
+                <textarea id="descricao" rows="4" placeholder="Breve resumo do projeto..." required></textarea>
+            </div>
+            <button type="submit" class="btn-enviar">Gerar Código do Card</button>
+        </form>
+
+        <div id="resultado" style="margin-top: 20px; display: none;">
+            <label style="color: var(--coral);">Copie o código abaixo e cole no seu projetos.html:</label>
+            <textarea id="codigoGerado" style="width: 100%; height: 150px; margin-top: 10px; background: #1a1a1a; color: #00ff00; font-family: monospace;"></textarea>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('projetoForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const titulo = document.getElementById('titulo').value;
+            const imagem = document.getElementById('imagem').value;
+            const link = document.getElementById('link').value;
+            const descricao = document.getElementById('descricao').value;
+            const tags = document.getElementById('tags').value.split(',').map(t => t.trim());
+
+            // Gera as tags HTML dinamicamente
+            const tagsHTML = tags.map(t => `<span class="tag_generic">${t}</span>`).join('');
+
+            // Template do Card que você já usa
+            const template = `
+<article class="main_galeria_itens"> 
+    <a href="${link}" target="_blank" rel="noopener noreferrer" class="link_projeto">
+        <h2 class="main_galeria_itens_h2">${titulo}</h2>
+        <figure class="container_img_projeto">
+            <img class="main_galeria_itens_img" src="${imagem}" alt="Preview do projeto ${titulo}">
+        </figure>
+        <div class="main_galeria_itens_descricao">
+            <div class="container_tags">
+                ${tagsHTML}
+            </div>
+            <p class="main_galeria_itens_descricao_p">${descricao}</p>
+        </div>
+    </a>
+</article>`;
+
+            document.getElementById('codigoGerado').value = template;
+            document.getElementById('resultado').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
