@@ -4,79 +4,160 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evaldo Butzke | Software Developer</title>
-    
+    <meta name="description" content="Software Developer especializado em Java, Spring Boot, Docker e AWS.">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="./src/styles/reset.css">
-    <link rel="stylesheet" href="./src/styles/style.css">
-    <link rel="stylesheet" href="./src/styles/perfil.css">
-    <link rel="stylesheet" href="./src/styles/responsive.css">
-    
+    <link rel="stylesheet" href="./src/styles/main.css">
+    <link rel="stylesheet" href="./src/styles/index.css">
     <link rel="shortcut icon" href="./src/img/alien-monster_1f47e.png" type="image/x-icon">
 </head>
 <body>
-    <header class="header">
-        <a class="header_logo" href="index.html" aria-label="Home">
-            <span class="header_logo_b">&lt;</span> 
-            <span class="header_logo_b_a">Evaldo Butzke</span>
-            <span class="header_logo_b">/&gt;</span>
+
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <header>
+        <a class="logo" href="index.html" aria-label="Home">
+            <span class="bracket">&lt;</span>
+            <span class="name">Evaldo Butzke</span>
+            <span class="bracket">/&gt;</span>
         </a>
-
         <nav>
-            <ul class="header_menu">
-                <li><a title="SOBRE" href="index.html" class="header_menu_itens selecionado">SOBRE</a></li>
-                <li><a title="PROJETOS" href="projetos.html" class="header_menu_itens">PROJETOS</a></li>
-            </ul>
+            <a href="index.html" class="nav-link active">Sobre</a>
+            <a href="projetos.html" class="nav-link">Projetos</a>
         </nav>
-
-        <ul class="header_social">
-            <li class="header_social_itens"><a title="LinkedIn" href="https://www.linkedin.com/in/evaldo-butzke/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a></li>
-            <li class="header_social_itens"><a title="GitHub" href="https://github.com/evaldo91" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github-alt"></i></a></li>
-            <li class="header_social_itens"><a title="X (Twitter)" href="https://twitter.com/eusouevaldo_" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a></li>
-            <li class="header_social_itens"><a title="Instagram" href="https://www.instagram.com/eusouevaldo_/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a></li>
-<<<<<<< HEAD
-            <li class="header_social_itens"><a title="E-mail" href="mailto:butzkeevaldo@gmail.com"><i class="fa-regular fa-envelope"></i></a></li>
-=======
-            <li class="header_social_itens"><a title="E-mail" href="mailto:evaldo@butzke.tech"><i class="fa-regular fa-envelope"></i></a></li>
->>>>>>> b08be0b7ec3482169d75603f56ec27f19eb2de69
-            <li class="header_social_itens"><a title="Telegram" href="https://t.me/evaldo91" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-telegram"></i></a></li>
-        </ul>
     </header>
 
-    <main class="main">
-        <section class="main_perfil">
-            <div class="main_perfil_sobre">
-                <h1 class="main_perfil_sobre_h1">Olá! Eu sou o Evaldo</h1>
-                <p class="main_perfil_sobre_p">
-                    34 anos, de <strong>Guarapari - ES</strong>, residente em Vila Velha. 
-                    Transição de carreira sólida com mais de 7 anos em telecomunicações para o <strong>Desenvolvimento de Software</strong>.
-                </p>
-                
-                <p class="main_perfil_sobre_p">
-                    Atualmente graduando em <b>Ciência da Computação</b> e focado no ecossistema <b>Java</b>. 
-                    Construo aplicações robustas utilizando <b>Spring Boot, PostgreSQL e Docker</b>, com deploy em ambientes <b>AWS e Azure</b>.
-                </p>
-
-                <div class="tech_stack">
-                    <span class="tech_badge"><i class="fa-brands fa-java"></i> Java</span>
-                    <span class="tech_badge"><i class="fa-solid fa-leaf"></i> Spring Boot</span>
-                    <span class="tech_badge"><i class="fa-brands fa-docker"></i> Docker</span>
-                    <span class="tech_badge"><i class="fa-brands fa-aws"></i> AWS</span>
-                    <span class="tech_badge"><i class="fa-solid fa-database"></i> SQL</span>
-                </div>
-
-                <p class="main_perfil_sobre_p">
-                    A formação pelo programa <b>ONE (Alura/Oracle)</b> consolidou meu conhecimento em lógica e arquitetura Back-End.
-                </p>
+    <section class="hero">
+        <div class="hero-text">
+            <p class="hero-eyebrow">Software Developer · Back-End</p>
+            <h1>Olá! Eu sou o <span>Evaldo</span></h1>
+            <p class="hero-subtitle">Java · Spring Boot · Cloud</p>
+            <p class="hero-bio">
+                34 anos, de <strong>Guarapari - ES</strong>, residente em Vila Velha.<br>
+                Transição sólida de mais de 7 anos em telecomunicações para o
+                <strong>Desenvolvimento de Software</strong>. Graduando em
+                <strong>Ciência da Computação</strong>, formado pelo programa
+                <strong>ONE (Alura/Oracle)</strong>.
+            </p>
+            <div class="stack">
+                <span class="chip"><i class="fa-brands fa-java"></i> Java</span>
+                <span class="chip"><i class="fa-solid fa-leaf"></i> Spring Boot</span>
+                <span class="chip"><i class="fa-brands fa-docker"></i> Docker</span>
+                <span class="chip"><i class="fa-brands fa-aws"></i> AWS</span>
+                <span class="chip"><i class="fa-solid fa-cloud"></i> Azure</span>
+                <span class="chip"><i class="fa-solid fa-database"></i> PostgreSQL</span>
             </div>
-            
-            <figure class="main_perfil_img">
-                <img src="./src/img/perfil.png" alt="Foto de perfil de Evaldo Butzke">
-            </figure>
-        </section>
-    </main>
+            <div class="cta-row">
+                <a href="projetos.html" class="btn btn-primary">
+                    <i class="fa-solid fa-folder-open"></i> Ver Projetos
+                </a>
+                <a href="#contato" class="btn btn-ghost">
+                    <i class="fa-regular fa-envelope"></i> Contato
+                </a>
+            </div>
+        </div>
 
-    <footer class="footer">
-        <p>Desenvolvido com ☕ e código por Evaldo M. Butzke | &copy; 2026</p>
+        <div class="hero-avatar">
+            <div class="avatar-ring"></div>
+            <div class="avatar-inner">
+                <img src="./src/img/perfil.png" alt="Foto de perfil de Evaldo Butzke">
+            </div>
+            <div class="avatar-badge">
+                <span class="badge-label">Disponível para</span>
+                <span class="badge-value">🟢 Oportunidades</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <div class="divider-line"></div>
+        <div style="height:60px"></div>
+        <p class="section-label reveal"><span>//</span> Sobre mim</p>
+        <div class="facts-grid">
+            <div class="fact-card reveal">
+                <div class="fact-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <p class="fact-title">Formação</p>
+                <p class="fact-value">Ciência da Computação</p>
+            </div>
+            <div class="fact-card reveal">
+                <div class="fact-icon"><i class="fa-solid fa-briefcase"></i></div>
+                <p class="fact-title">Experiência anterior</p>
+                <p class="fact-value">7+ anos em Telecom</p>
+            </div>
+            <div class="fact-card reveal">
+                <div class="fact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <p class="fact-title">Localização</p>
+                <p class="fact-value">Vila Velha, ES</p>
+            </div>
+            <div class="fact-card reveal">
+                <div class="fact-icon"><i class="fa-solid fa-certificate"></i></div>
+                <p class="fact-title">Certificação</p>
+                <p class="fact-value">ONE · Alura / Oracle</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="terminal">
+        <p class="section-label reveal"><span>//</span> Stack técnica</p>
+        <div class="terminal-window reveal">
+            <div class="terminal-bar">
+                <div class="dot dot-r"></div>
+                <div class="dot dot-y"></div>
+                <div class="dot dot-g"></div>
+                <span class="terminal-title">evaldo.json</span>
+            </div>
+            <div class="terminal-body">
+                <div class="line"><span class="prompt">$</span> <span class="cmd">cat</span> evaldo.json</div>
+                <div class="line">{</div>
+                <div class="line">&nbsp;&nbsp;<span class="key">"linguagens"</span>: [<span class="str">"Java 21"</span>, <span class="str">"SQL"</span>, <span class="str">"Shell"</span>],</div>
+                <div class="line">&nbsp;&nbsp;<span class="key">"frameworks"</span>: [<span class="str">"Spring Boot"</span>, <span class="str">"Spring Security"</span>, <span class="str">"Hibernate"</span>],</div>
+                <div class="line">&nbsp;&nbsp;<span class="key">"infra"</span>: [<span class="str">"Docker"</span>, <span class="str">"AWS"</span>, <span class="str">"Azure"</span>, <span class="str">"GitHub Actions"</span>],</div>
+                <div class="line">&nbsp;&nbsp;<span class="key">"banco_de_dados"</span>: [<span class="str">"PostgreSQL"</span>, <span class="str">"MySQL"</span>],</div>
+                <div class="line">&nbsp;&nbsp;<span class="key">"status"</span>: <span class="val">"open_to_work"</span>, <span class="comment">// 🟢 disponível</span></div>
+                <div class="line">&nbsp;&nbsp;<span class="key">"localizacao"</span>: <span class="str">"Vila Velha, ES, Brasil"</span></div>
+                <div class="line">}</div>
+                <div class="line" style="margin-top:8px"><span class="prompt">$</span> <span class="comment">█</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contato">
+        <p class="section-label reveal"><span>//</span> Contato</p>
+        <div class="contact-grid">
+            <a href="https://wa.me/5527998003446" target="_blank" rel="noopener noreferrer"
+               class="contact-card whatsapp reveal">
+                <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                <div class="contact-info">
+                    <span class="contact-label">WhatsApp</span>
+                    <span class="contact-value">+55 (27) 99800-3446</span>
+                </div>
+            </a>
+            <a href="mailto:evaldo@butzke.tech" class="contact-card email reveal">
+                <div class="contact-icon"><i class="fa-regular fa-envelope"></i></div>
+                <div class="contact-info">
+                    <span class="contact-label">E-mail</span>
+                    <span class="contact-value">evaldo@butzke.tech</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p class="footer-copy">Desenvolvido com <span>☕</span> e código por Evaldo M. Butzke &mdash; &copy; 2026</p>
     </footer>
+
+    <script>
+        const reveals = document.querySelectorAll('.reveal');
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach((e, i) => {
+                if (e.isIntersecting) {
+                    setTimeout(() => e.target.classList.add('visible'), i * 80);
+                    io.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        reveals.forEach(el => io.observe(el));
+    </script>
 </body>
 </html>

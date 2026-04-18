@@ -4,68 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projetos | Evaldo Butzke</title>
-    
+    <meta name="description" content="Projetos desenvolvidos por Evaldo Butzke — Software Developer especializado em Java e Spring Boot.">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="./src/styles/reset.css">
-    <link rel="stylesheet" href="./src/styles/style.css">
-    <link rel="stylesheet" href="./src/styles/galeria.css">
-    <link rel="stylesheet" href="./src/styles/responsive.css">
-    
+    <link rel="stylesheet" href="./src/styles/main.css">
+    <link rel="stylesheet" href="./src/styles/projetos.css">
     <link rel="shortcut icon" href="./src/img/alien-monster_1f47e.png" type="image/x-icon">
 </head>
 <body>
-    <header class="header">
-        <a class="header_logo" href="index.html" aria-label="Home">
-            <span class="header_logo_b">&lt;</span> 
-            <span class="header_logo_b_a">Evaldo Butzke</span>
-            <span class="header_logo_b">/&gt;</span>
+
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <header>
+        <a class="logo" href="index.html" aria-label="Home">
+            <span class="bracket">&lt;</span>
+            <span class="name">Evaldo Butzke</span>
+            <span class="bracket">/&gt;</span>
         </a>
-
         <nav>
-            <ul class="header_menu">
-                <li><a title="SOBRE" href="index.html" class="header_menu_itens">SOBRE</a></li>
-                <li><a title="PROJETOS" href="projetos.html" class="header_menu_itens selecionado">PROJETOS</a></li>
-            </ul>
+            <a href="index.html" class="nav-link">Sobre</a>
+            <a href="projetos.html" class="nav-link active">Projetos</a>
         </nav>
-
-        <ul class="header_social">
-            <li class="header_social_itens"><a title="LinkedIn" href="https://www.linkedin.com/in/evaldo-butzke/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a></li>
-            <li class="header_social_itens"><a title="GitHub" href="https://github.com/evaldo91" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github-alt"></i></a></li>
-            <li class="header_social_itens"><a title="X (Twitter)" href="https://twitter.com/eusouevaldo_" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a></li>
-            <li class="header_social_itens"><a title="Instagram" href="https://www.instagram.com/eusouevaldo_/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a></li>
-            <li class="header_social_itens"><a title="E-mail" href="mailto:evaldo@butzke.tech"><i class="fa-regular fa-envelope"></i></a></li>
-            <li class="header_social_itens"><a title="Telegram" href="https://t.me/evaldo91" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatapps"></i></a></li>
-        </ul>
     </header>
 
-    <main class="main">    
-        <section class="main_galeria">
-            <article class="main_galeria_itens"> 
-                <a href="https://github.com/evaldo91/challenge-conversor-de-moedas" target="_blank" rel="noopener noreferrer" class="link_projeto">
-                    <h2 class="main_galeria_itens_h2">Conversor de Moedas</h2>
-                    
-                    <figure class="container_img_projeto">
-                        <img class="main_galeria_itens_img" src="./src/img/conversor.png" alt="Interface CLI do conversor de moedas em Java">
-                    </figure>
+    <div class="page-hero">
+        <p class="page-eyebrow">Portfólio</p>
+        <h1>Meus <span>Projetos</span></h1>
+        <p>Aplicações desenvolvidas com foco em back-end robusto, boas práticas e arquitetura limpa.</p>
+    </div>
 
-                    <div class="main_galeria_itens_descricao">
-                        <div class="container_tags">
-                            <span class="tag_java">Java 21</span>
-                            <span class="tag_cli">CLI</span>
-                        </div>
-                        <p class="main_galeria_itens_descricao_p">
-                            Conversor de moedas robusto desenvolvido como desafio do programa ONE (Oracle Next Education). 
-                            Utiliza consumo de API externa para taxas em tempo real.
-                        </p>
+    <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="java">Java</button>
+        <button class="filter-btn" data-filter="spring">Spring</button>
+        <button class="filter-btn" data-filter="docker">Docker</button>
+        <button class="filter-btn" data-filter="api">API</button>
+    </div>
+
+    <main class="projects-section">
+        <div class="projects-grid" id="grid">
+
+            <a href="https://github.com/evaldo91/challenge-conversor-de-moedas"
+               target="_blank" rel="noopener"
+               class="project-card" data-tags="java cli api"
+               style="animation-delay:0.1s">
+                <div class="project-img">
+                    <img src="./src/img/conversor.png" alt="Interface CLI do conversor de moedas em Java">
+                </div>
+                <div class="project-body">
+                    <div class="project-tags">
+                        <span class="tag tag-java">Java 21</span>
+                        <span class="tag tag-cli">CLI</span>
+                        <span class="tag tag-api">API REST</span>
                     </div>
-                </a>
-            </article>
+                    <h2 class="project-title">Conversor de Moedas</h2>
+                    <p class="project-desc">
+                        Conversor de moedas robusto desenvolvido como desafio do programa ONE (Oracle Next Education).
+                        Consome API externa para cotações em tempo real com tratamento de erros e múltiplas moedas.
+                    </p>
+                    <div class="project-footer">
+                        <i class="fa-brands fa-github"></i> Ver no GitHub
+                        <i class="fa-solid fa-arrow-right" style="margin-left:auto"></i>
+                    </div>
+                </div>
+            </a>
 
-            </section>
+            <!-- Para adicionar mais projetos, copie o bloco acima e ajuste:
+                 data-tags: combinação de "java spring docker api cli"
+                 href: link do GitHub
+                 src/img: screenshot do projeto
+            -->
+
+        </div>
     </main>
 
-    <footer class="footer">
-        <p>Desenvolvido com 👾 por Evaldo M. Butzke | &copy; 2026</p>
+    <footer>
+        <p class="footer-copy">Desenvolvido com <span>👾</span> por Evaldo M. Butzke &mdash; &copy; 2026</p>
     </footer>
+
+    <script>
+        const btns  = document.querySelectorAll('.filter-btn');
+        const cards = document.querySelectorAll('.project-card');
+
+        btns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                btns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filter = btn.dataset.filter;
+                cards.forEach(card => {
+                    const tags = card.dataset.tags || '';
+                    card.style.display = (filter === 'all' || tags.includes(filter)) ? 'flex' : 'none';
+                });
+            });
+        });
+    </script>
 </body>
 </html>
