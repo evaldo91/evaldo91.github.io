@@ -48,6 +48,7 @@
     color: #e0e0e0;
     margin-bottom: 20px;
     flex-grow: 1; /* Faz o texto ocupar o espaço disponível */
+<<<<<<< HEAD
 }
 
 /* Sistema de Tags (Badges) */
@@ -83,3 +84,40 @@
     background-color: #6db33f;
     border: 1px solid #5a9632;
 }
+=======
+}
+
+/* Sistema de Tags (Badges) */
+.container_tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+    padding-top: 15px;
+}
+
+.tag {
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 4px;
+    padding: 4px 10px;
+    color: #fff;
+}
+
+.tag_java {
+    background-color: #f05032; /* Tom de tomato mais vibrante */
+    border: 1px solid #c0392b;
+}
+
+.tag_cli {
+    background-color: #7f8c8d; /* Cinza metálico */
+    border: 1px solid #95a5a6;
+}
+
+/* Adicionei para Spring para combinar com seu perfil */
+.tag_spring {
+    background-color: #6db33f;
+    border: 1px solid #5a9632;
+}
+>>>>>>> b08be0b7ec3482169d75603f56ec27f19eb2de69

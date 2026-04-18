@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 
  /* Tablet e dispositivos médios */
+=======
+/* Tablet e dispositivos médios */
+>>>>>>> b08be0b7ec3482169d75603f56ec27f19eb2de69
 @media only screen and (max-width: 768px) {
     .header {
         flex-direction: column;
@@ -69,4 +73,8 @@
         font-size: 0.8rem;
         padding: 20px;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> b08be0b7ec3482169d75603f56ec27f19eb2de69

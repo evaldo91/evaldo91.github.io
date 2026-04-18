@@ -45,6 +45,22 @@
     width: 100%;
     height: 100%;
     object-fit: cover; /* Garante que a foto não fique esticada */
+<<<<<<< HEAD
+=======
+}
+
+/* Ajuste para telas pequenas (Mobile) */
+@media (max-width: 768px) {
+    .main_perfil {
+        flex-direction: column-reverse; /* Foto em cima, texto embaixo no mobile */
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    .main_perfil_img {
+        width: 250px; /* Tamanho menor para celulares */
+    }
+>>>>>>> b08be0b7ec3482169d75603f56ec27f19eb2de69
 }
 
 /* Ajuste para telas pequenas (Mobile) */

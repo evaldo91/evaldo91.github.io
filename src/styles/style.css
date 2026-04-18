@@ -120,4 +120,8 @@ main {
     background-color: rgba(0, 0, 0, 0.2); /* Sutil fundo para destacar do main */
     border-top: 1px solid var(--roxo-escuro);
     border-bottom: 8px solid var(--verde-amarelado); 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> b08be0b7ec3482169d75603f56ec27f19eb2de69
